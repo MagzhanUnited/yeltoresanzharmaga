@@ -37,7 +37,7 @@
               <a class="nav-link" href="#">Home page<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="#aboutUs" onclick="scrollToSection('#aboutUs')">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contacts</a>
@@ -126,7 +126,7 @@
       <section class="container mt-5">
         <div class="row">
           <div class="col-md-4" style="margin-top: auto; margin-bottom: auto;">
-            <h2 style="color:royalblue;">Anime List</h2>
+            <h2 style="color:goldenrod;">Anime List</h2>
             <div class="form-group">
               <label for="sortDropdown" style="color:goldenrod;">Sort By:</label>
               <select class="form-control" id="sortDropdown">
@@ -144,7 +144,7 @@
               <a href="#" class="list-group-item list-group-item-action">Black Clover</a>
               <a href="#" class="list-group-item list-group-item-action">Naruto</a>
               <a href="#" class="list-group-item list-group-item-action">Jujutsu Kaisen</a>
-              <a href="#" class="list-group-item list-group-item-action">Attack on titanr</a>
+              <a href="#" class="list-group-item list-group-item-action">Attack on titan</a>
               <!-- Add more anime titles here -->
             </div>
           </div>
@@ -156,7 +156,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Naruto</h5>
                     <p class="card-text">Adventure of Genin Shinobi of Hidden Leaf village, and his life.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <a href="https://naruto.fandom.com/ru/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" class="btn btn-primary">Learn More</a>
                   </div>
                 </div>
               </div>
@@ -166,7 +166,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Bleach</h5>
                     <p class="card-text">Incredible story of Ichigo Kurosaki, simple human in the world of Shinigami.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <a href="https://bleach.fandom.com/ru/wiki/%D0%91%D0%BB%D0%B8%D1%87_%D0%B2%D0%B8%D0%BA%D0%B8" class="btn btn-primary">Learn More</a>
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Bluelock</h5>
                     <p class="card-text">The way of egoist Isagi Yoichi to the victory in football world.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <a href="https://bluelock.fandom.com/wiki/Blue_Lock_Wiki" class="btn btn-primary">Learn More</a>
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Black Clover</h5>
                     <p class="card-text">Hard life of non-magic Asta in the world of Magic.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <a href="https://blackclover.fandom.com/wiki/Black_Clover_Wiki" class="btn btn-primary">Learn More</a>
                   </div>
                 </div>
               </div>
@@ -198,18 +198,18 @@
                   <div class="card-body">
                     <h5 class="card-title">Jujutsu Kaisen</h5>
                     <p class="card-text">Follow Yuji Itadori and his adventures in the world of curses and sorcery.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <a href="https://jujutsu-kaisen.fandom.com/ru/wiki/%D0%9C%D0%B0%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%91%D0%B8%D1%82%D0%B2%D0%B0_Wiki" class="btn btn-primary">Learn More</a>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6 mb-4">
                 <div class="card">
-                  <img src="https://images2.alphacoders.com/582/582804.png" class="card-img-top" alt="Jujutsu Kaisen">
+                  <img src="https://images2.alphacoders.com/582/582804.png" class="card-img-top" alt="Attack on titan">
                   <div class="card-body">
                     <h5 class="card-title">Attack on titan</h5>
-                    <p class="card-text">Follow Yuji Itadori and his adventures in the world of curses and sorcery.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <p class="card-text">Justice of Eren Yeager over people and adventure among Titans.</p>
+                    <a href="https://attackontitan.fandom.com/wiki/Attack_on_Titan_Wiki" class="btn btn-primary">Learn More</a>
                   </div>
                 </div>
               </div>
@@ -218,11 +218,122 @@
           </div>
         </div>
       </section>
-      
+      <section id="videoPlayerSection" class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 style="color:goldenrod;">Anime Video Player</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video id="animeVideo" class="embed-responsive-item" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2 style="color:goldenrod;">Related Anime</h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#" onclick="playVideo('https://r80106.kujo-jotaro.com/naruto/2/415.1080.cc15baa7f9c8d969.mp4?hash1=c3b22a33f42cb76b2950fd1b77155724&hash2=45bc283bf945896c176a83edebf56780')">Naruto</a></li>
+                    <li class="list-group-item"><a href="#" onclick="playVideo('https://r80106.kujo-jotaro.com/bleach/1.1080.f61ed06faffab658.mp4?hash1=46c009115e9eae8aced3851683680afc&hash2=e86e3118f00574c2a553d65427d74060')">Bleach</a></li>
+                    <li class="list-group-item"><a href="#" onclick="playVideo('https://r80106.kujo-jotaro.com/blue-lock/1.1080.ef77e515ce6f56ae.mp4?hash1=7b9d58fbff9b47763a100fbb2a4e1cc1&hash2=82af3a594b19420d49e91ea2c3447532')">Bluelock</a></li>
+                    <li class="list-group-item"><a href="#" onclick="playVideo('https://r80106.kujo-jotaro.com/black-clover/1.1080.792beefdf28e3580.mp4?hash1=d7d737182e62436daafcd0145c0027b7&hash2=37be419d988353d9f27009c1edd11a89')">Black Clover</a></li>
+                    <li class="list-group-item"><a href="#" onclick="playVideo('https://r80106.kujo-jotaro.com/jujutsu-kaisen/1.1080.812841b2c0546248.mp4?hash1=2249a0f7f0266419372929c3a6bf21ef&hash2=46e6c7d4e86cb39d4a73022e2c2d14dc')">Jujustsu Kaisen</a></li>
+                    <li class="list-group-item"><a href="#" onclick="playVideo('https://r80106.kujo-jotaro.com/shingeki-no-kyojin/2/1.1080.c9a5b710a8fcbdd4.mp4?hash1=3365cea48542cadaa4a64d15112f8790&hash2=76c2d7098087ef42252032eb3bab346b')">Attack on titan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <h2 style="color:lightcoral;">Rate This Anime from 1 to 5</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="rating">
+                        <input type="radio" name="rating" id="star5" value="5">
+                        <label for="star5"></label>
+                        <input type="radio" name="rating" id="star4" value="4">
+                        <label for="star4"></label>
+                        <input type="radio" name="rating" id="star3" value="3">
+                        <label for="star3"></label>
+                        <input type="radio" name="rating" id="star2" value="2">
+                        <label for="star2"></label>
+                        <input type="radio" name="rating" id="star1" value="1">
+                        <label for="star1"></label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p style="color:goldenrod;">Average Rating: <span id="averageRating">4.5</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <section id="aboutUs" class="bg-gray py-5 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="margin-top: auto; margin-bottom: auto;">
+                    <h2 style="color:goldenrod">About Website</h2>
+                    <p>Welcome to our anime community! We're passionate about bringing you the best anime content from around the world. Our mission is to provide a platform where anime enthusiasts can come together, discover new series, and share their love for this art form.</p>
+                    <p>Our team of dedicated anime lovers is constantly curating and updating our library to ensure you have access to a wide range of anime titles, from classics to the latest releases. We're committed to creating an immersive and enjoyable experience for all anime fans.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/904bb68c-03b2-401b-a291-7c7b737055af/dehz4l9-59535af7-4e6b-4360-8fae-2d8077343021.jpg/v1/fill/w_1280,h_1503,q_75,strp/anime_mix_by_dinoartt_dehz4l9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUwMyIsInBhdGgiOiJcL2ZcLzkwNGJiNjhjLTAzYjItNDAxYi1hMjkxLTdjN2I3MzcwNTVhZlwvZGVoejRsOS01OTUzNWFmNy00ZTZiLTQzNjAtOGZhZS0yZDgwNzczNDMwMjEuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qYTJf3f-zaF23SSgQFt7csMmkZFhwZqK4-3D7q65tzY" alt="About Us Image" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        // Get all "Watch" buttons with the class "btn-watch"
+        var watchButtons = document.querySelectorAll('.btn-watch');
+    
+        // Add a click event listener to each "Watch" button
+        watchButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default link behavior
+                // Scroll to the video player section smoothly
+                document.getElementById('videoPlayerSection').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        function playVideo(videoSource) {
+        var video = document.getElementById('animeVideo');
+        video.src = videoSource;
+        video.load(); // Load the new video source
+        video.play(); // Play the video
+    }
+    </script>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.querySelector(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Contact Us</h4>
+                <p>Email: mr.eltore@mail.ru</p>
+                <p>Email: mr.sanzhar@mail.ru</p>
+                <p>Email: mr.magzhan@mail.ru</p>
+                <p>Phone: +8 800 555 3535</p>
+            </div>
+            <div class="col-md-2">
+                <h4>Follow Us</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>
