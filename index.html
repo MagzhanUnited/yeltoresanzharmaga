@@ -25,6 +25,18 @@
       body {
         background-color: rgb(20, 20, 20);
       }
+      .character-list {
+            background: linear-gradient(to right, #3a0150, #d4aa01);
+            color: white;
+        }
+      .character-name {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            text-align: left;
+            padding: 0;
+        }
     </style>
   </head>
   <body>
@@ -477,36 +489,231 @@
         </div>
       </div>
     </section>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <section id="aboutUs" class="bg-gray py-5 text-white">
-      <div class="container">
+
+
+    <section>
+      <div class="container mt-5">
+        <h2 style="color: goldenrod">Anime Characters</h2>
+        <p style="color: goldenrod">Click on a character name to view more information.</p>
+    
+        <!-- Character Table -->
         <div class="row">
-          <div class="col-md-6" style="margin-top: auto; margin-bottom: auto">
-            <h2 style="color: goldenrod">About Website</h2>
-            <p>
-              Welcome to our anime community! We're passionate about bringing
-              you the best anime content from around the world. Our mission is
-              to provide a platform where anime enthusiasts can come together,
-              discover new series, and share their love for this art form.
-            </p>
-            <p>
-              Our team of dedicated anime lovers is constantly curating and
-              updating our library to ensure you have access to a wide range of
-              anime titles, from classics to the latest releases. We're
-              committed to creating an immersive and enjoyable experience for
-              all anime fans.
-            </p>
+          <div class="col-md-6"> <!-- Set to half width on medium-sized screens and larger -->
+              <!-- Character Table -->
+              <table class="table table-bordered character-list">
+                  <thead>
+                      <tr>
+                          <th scope="col">Character Name</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!-- Character Name Buttons -->
+                      <tr>
+                          <td><button class="character-name" data-toggle="modal" data-target="#narutoModal">Naruto Uzumaki</button></td>
+                      </tr>
+                      <tr>
+                          <td><button class="character-name" data-toggle="modal" data-target="#ichigoModal">Ichigo Kurosaki</button></td>
+                      </tr>
+                      <tr>
+                        <td><button class="character-name" data-toggle="modal" data-target="#astaModal">Asta</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="character-name" data-toggle="modal" data-target="#isagiModal">Isagi Yoichi</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="character-name" data-toggle="modal" data-target="#itadoriModal">Itadori Yuiji</button></td>
+                    </tr>
+                    <tr>
+                      <td><button class="character-name" data-toggle="modal" data-target="#erenModal">Eren Yeager</button></td>
+                  </tr>
+                  </tbody>
+              </table>
           </div>
           <div class="col-md-6">
-            <img
-              src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/904bb68c-03b2-401b-a291-7c7b737055af/dehz4l9-59535af7-4e6b-4360-8fae-2d8077343021.jpg/v1/fill/w_1280,h_1503,q_75,strp/anime_mix_by_dinoartt_dehz4l9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUwMyIsInBhdGgiOiJcL2ZcLzkwNGJiNjhjLTAzYjItNDAxYi1hMjkxLTdjN2I3MzcwNTVhZlwvZGVoejRsOS01OTUzNWFmNy00ZTZiLTQzNjAtOGZhZS0yZDgwNzczNDMwMjEuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qYTJf3f-zaF23SSgQFt7csMmkZFhwZqK4-3D7q65tzY"
-              alt="About Us Image"
-              class="img-fluid rounded-circle"
-            />
-          </div>
+            <style>
+              .soft-edge-image {
+                  filter: blur(0.1px);
+                  border-radius: 5%;
+              }
+          </style>
+            <img src="https://gifdb.com/images/high/jujutsu-kaisen-satoru-gojo-frolic-bgi6v62j3dpb17nx.gif" alt="Looping Animation" class="soft-edge-image" width="520" height="320">
         </div>
       </div>
+  </div>
+    <!-- Character Modals -->
+    
+    <!-- Naruto Modal -->
+    <div class="modal fade" id="narutoModal" tabindex="-1" role="dialog" aria-labelledby="narutoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="narutoModalLabel">Naruto Uzumaki</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Character Image -->
+                    <img src="https://pm1.aminoapps.com/6576/a26ed32f8a9abada8214591c069a02405ce6a792_hq.jpg" alt="Naruto Uzumaki" class="img-fluid">
+                    <!-- Character Description -->
+                    <p>Naruto Uzumaki is a young ninja with dreams of becoming Hokage. He is the main character of the anime Naruto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Ichigo Modal -->
+    <div class="modal fade" id="ichigoModal" tabindex="-1" role="dialog" aria-labelledby="ichigoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ichigoModalLabel">Ichigo Kurosaki</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Character Image -->
+                    <img src="https://i.pinimg.com/originals/e1/a6/dc/e1a6dc7444ca1ec991c0fbf3d4bf4194.jpg" alt="Ichigo Kurosaki" class="img-fluid">
+                    <!-- Character Description -->
+                    <p>Ichigo Kurosaki is a teenager with the ability to see ghosts. He is the main character of the anime Bleach.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Asta Modal -->
+    <div class="modal fade" id="astaModal" tabindex="-1" role="dialog" aria-labelledby="astaModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="astaModalLabel">Asta</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <!-- Character Image -->
+                  <img src="https://images6.fanpop.com/image/photos/42600000/asta-art-black-clover-42651934-850-1202.jpg" alt="Asta" class="img-fluid">
+                  <!-- Character Description -->
+                  <p>Asta is the main character of the anime Black Clover. He is a non-magic user striving to become the Wizard King.</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Isagi Yoichi Modal -->
+    <div class="modal fade" id="isagiModal" tabindex="-1" role="dialog" aria-labelledby="isagiModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="isagiModalLabel">Isagi Yoichi</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <!-- Character Image -->
+                  <img src="https://images.squarespace-cdn.com/content/v1/5ffa25e2e3802f025d87035d/1681684549768-CJNMWJXIU4D9CP2WVRSB/Untitled_Artwork+15.jpg?format=1000w" alt="Isagi Yoichi" class="img-fluid">
+                  <!-- Character Description -->
+                  <p>Isagi Yoichi is the main character of the manga Bluelock. He strives for victory in the world of football as an egoist.</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Itadori Yuiji Modal -->
+    <div class="modal fade" id="itadoriModal" tabindex="-1" role="dialog" aria-labelledby="itadoriModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="itadoriModalLabel">Itadori Yuiji</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <!-- Character Image -->
+                  <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/7/75/Yuji_Itadori_%28SJ_2020-43%29.png/revision/latest?cb=20210305222700" alt="Itadori Yuiji" class="img-fluid">
+                  <!-- Character Description -->
+                  <p>Itadori Yuiji is the main character of the anime Jujutsu Kaisen. He becomes involved in a world of curses and sorcery.</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Eren Yeager Modal -->
+    <div class="modal fade" id="erenModal" tabindex="-1" role="dialog" aria-labelledby="erenModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="erenModalLabel">Eren Yeager</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <!-- Character Image -->
+                  <img src="https://w0.peakpx.com/wallpaper/284/255/HD-wallpaper-eren-attack-on-titan-eren-jaeger-eren-yeager-shingeki-no-kyojin.jpg" alt="Eren Yeager" class="img-fluid">
+                  <!-- Character Description -->
+                  <p>Eren Yeager is the main character of the anime Attack on Titan. He seeks freedom and revenge against the Titans.</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    
+  </section>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <section id="aboutUs" class="bg-gray py-5 text-white">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6" style="margin-top: auto; margin-bottom: auto">
+                <h2 style="color: goldenrod">About Website</h2>
+                <p>
+                  Welcome to our anime community! We're passionate about bringing
+                  you the best anime content from around the world. Our mission is
+                  to provide a platform where anime enthusiasts can come together,
+                  discover new series, and share their love for this art form.
+                </p>
+                <p>
+                  Our team of dedicated anime lovers is constantly curating and
+                  updating our library to ensure you have access to a wide range of
+                  anime titles, from classics to the latest releases. We're
+                  committed to creating an immersive and enjoyable experience for
+                  all anime fans.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <img
+                  src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/904bb68c-03b2-401b-a291-7c7b737055af/dehz4l9-59535af7-4e6b-4360-8fae-2d8077343021.jpg/v1/fill/w_1280,h_1503,q_75,strp/anime_mix_by_dinoartt_dehz4l9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUwMyIsInBhdGgiOiJcL2ZcLzkwNGJiNjhjLTAzYjItNDAxYi1hMjkxLTdjN2I3MzcwNTVhZlwvZGVoejRsOS01OTUzNWFmNy00ZTZiLTQzNjAtOGZhZS0yZDgwNzczNDMwMjEuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qYTJf3f-zaF23SSgQFt7csMmkZFhwZqK4-3D7q65tzY"
+                  alt="About Us Image"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+            </div>
+          </div>
     </section>
 
     <script>
@@ -538,6 +745,7 @@
         }
       }
     </script>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
