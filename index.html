@@ -261,7 +261,6 @@
 
 <script src="script.js"></script>
 
-<script src="script.js"></script>
 <script>
     let intervalId;
 
@@ -302,6 +301,8 @@
     }
 
 </script>
+
+
 <section class="container mt-5">
     <div class="row">
         <div class="col-md-4" style="margin-top: auto; margin-bottom: auto">
@@ -556,7 +557,57 @@
         </div>
     </div>
 </section>
+<!--Form Validation-->
+<section>
+    <form id="second-section-form" onsubmit="return validateSecondSectionForm()">
+        <div>
+            <label for="fullname">Fullname:</label>
+            <input type="text" id="fullname" name="fullname">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
 
+    <script>
+        function validateSecondSectionForm() {
+            const nameInput = document.getElementById('fullname');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            if (nameInput.value === '') {
+                alert('The "Fullname" field must be filled in');
+                return false;
+            }
+
+            if (emailInput.value === '') {
+                alert('The "Email" field must be filled in');
+                return false;
+            }
+
+            if (messageInput.value === '') {
+                alert('The "Message" field must be filled in');
+                return false;
+            }
+
+            return true;
+        }
+
+        const secondSectionForm = document.getElementById('second-section-form');
+        secondSectionForm.addEventListener('submit', function (event) {
+            if (!validateSecondSectionForm()) {
+                event.preventDefault(); }
+        });
+    </script>
+</section>
 
 <section>
     <div class="container mt-5">
