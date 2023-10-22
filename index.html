@@ -3,6 +3,7 @@
     <title>AniMasters</title>
     <meta charset="utf-8" />
     <meta
+
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
@@ -230,6 +231,7 @@
                 </div>
             </div>
         </div>
+
         <a
                 class="carousel-control-prev"
                 href="#carouselExampleCaptions"
@@ -642,6 +644,7 @@
                         <td><button class="character-name" data-toggle="modal" data-target="#ichigoModal">Ichigo Kurosaki</button></td>
                     </tr>
                     <tr>
+
                         <td><button class="character-name" data-toggle="modal" data-target="#astaModal">Asta</button></td>
                     </tr>
                     <tr>
@@ -651,6 +654,7 @@
                         <td><button class="character-name" data-toggle="modal" data-target="#itadoriModal">Itadori Yuiji</button></td>
                     </tr>
                     <tr>
+
                         <td><button class="character-name" data-toggle="modal" data-target="#erenModal">Eren Yeager</button></td>
                     </tr>
                     </tbody>
@@ -668,6 +672,7 @@
         </div>
     </div>
     <!-- Character Modals -->
+
 
     <!-- Naruto Modal -->
     <div class="modal fade" id="narutoModal" tabindex="-1" role="dialog" aria-labelledby="narutoModalLabel" aria-hidden="true">
@@ -715,6 +720,7 @@
         </div>
     </div>
 
+
     <!-- Asta Modal -->
     <div class="modal fade" id="astaModal" tabindex="-1" role="dialog" aria-labelledby="astaModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -736,10 +742,12 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <!-- Isagi Yoichi Modal -->
     <div class="modal fade" id="isagiModal" tabindex="-1" role="dialog" aria-labelledby="isagiModalLabel" aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -759,10 +767,12 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <!-- Itadori Yuiji Modal -->
     <div class="modal fade" id="itadoriModal" tabindex="-1" role="dialog" aria-labelledby="itadoriModalLabel" aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -782,6 +792,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <!-- Eren Yeager Modal -->
@@ -851,10 +862,12 @@
                         muted
                         playsinline
                         class="img-fluid rounded-circle"
+
                 >
                     <source src="assets/Sukuna.webm" type="video/mp4">
                     <!-- Add additional source elements for different video formats if needed -->
                 </video>
+
             </div>
         </div>
     </div>
@@ -875,10 +888,12 @@
         });
     });
     function playVideo(videoSource) {
+
         var video = document.getElementById("animeVideo");
         video.src = videoSource;
         video.load(); // Load the new video source
         video.play(); // Play the video
+
     }
 </script>
 <script>
@@ -919,10 +934,12 @@
             const listItem = document.createElement("li");
             listItem.className = "list-group-item";
             listItem.innerHTML = `
+
                   ${animeName}
                   <button class="btn btn-danger btn-sm float-right delete">Delete</button>
                   <button class="btn btn-success btn-sm float-right complete">Mark as Completed</button>
               `;
+
             animeList.appendChild(listItem);
             animeInput.value = ""; // Clear the input field
         }
@@ -1036,3 +1053,4 @@
     </div>
 </footer>
 </html>
+
