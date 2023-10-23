@@ -63,9 +63,9 @@ h1 {
 }
 
 form {
-    background-color: black;
+    background-color: rgb(56, 56, 56);
     max-width: 400px;
-    margin: 30px auto;
+    margin: left;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -92,7 +92,7 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #333;
+    background-color: #000000;
     color: seagreen;
     padding: 10px 20px;
     border: none;
@@ -108,8 +108,8 @@ input[type="submit"]:hover {
 /*Feedback from users*/
 .feedback {
     max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
+    margin: right;
+    background-color: rgb(56, 56, 56);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
