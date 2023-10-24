@@ -614,22 +614,36 @@
 
     <section>
       <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-6">
-                <h3 style="color: goldenrod;">Leave a Comment</h3>
-                <input type="text" id="name" placeholder="Name">
-                <textarea id="comment" placeholder="Your comment"></textarea>
-                <button id="submit-comment">Submit</button>
+        <ul class="nav nav-tabs" id="commentTabs">
+            <li class="nav-item">
+                <a class="nav-link active" id="leaveCommentTab" data-toggle="tab" href="#leaveComment">Leave a Comment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="commentsTab" data-toggle="tab" href="#comments">Comments</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="leaveComment">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 style="color: goldenrod">Leave a Comment</h3>
+                        <input type="text" id="name" placeholder="Name">
+                        <textarea id="comment" placeholder="Your comment"></textarea>
+                        <button id="submit-comment">Submit</button>
+                    </div>
+                </div>
             </div>
-    
-            <div class="col-md-6">
-                <h3 style="color: goldenrod;">Comments</h3>
-                <div id="comment-list" class="comment-list" style="color:white;">
-                    <!-- Comments will be displayed here -->
+            <div class="tab-pane" id="comments">
+                <div class="col-md-6">
+                    <h3 style="color: goldenrod">Comments</h3>
+                    <div id="comment-list" class="comment-list" style="color: white;">
+                        <!-- Comments will be displayed here -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
       <script>
           document.getElementById("submit-comment").addEventListener("click", function () {
             const name = document.getElementById("name").value;
