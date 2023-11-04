@@ -1,3 +1,55 @@
+.ani {
+    color: red;
+    font-size: 1.6em;
+  }
+.masters {
+color: goldenrod;
+font-size: 1.6em;
+}
+body {
+background-color: rgb(20, 20, 20);
+}
+.character-list {
+    background: linear-gradient(to right, #3a0150, #d4aa01);
+    color: white;
+}
+.character-name {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+
+.completed {
+    text-decoration: line-through;
+    color: green;
+}
+    /* Add some animation to the delete action */
+.list-group-item {
+    transition: opacity 0.5s;
+}
+
+.rating {
+    display: inline-block; /* Display radio buttons in one line */
+}
+.commentary-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+.comment-list {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 2px solid white;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
 /*Countdown Timer*/
 .timer{
     background-color: black;
