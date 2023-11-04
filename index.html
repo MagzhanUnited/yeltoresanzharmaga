@@ -15,61 +15,6 @@
     />
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
-    
-    <style>
-      .ani {
-        color: red;
-        font-size: 1.6em;
-      }
-      .masters {
-        color: goldenrod;
-        font-size: 1.6em;
-      }
-      body {
-        background-color: rgb(20, 20, 20);
-      }
-      .character-list {
-            background: linear-gradient(to right, #3a0150, #d4aa01);
-            color: white;
-        }
-      .character-name {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            text-align: left;
-            padding: 0;
-        }
-
-
-        .completed {
-          text-decoration: line-through;
-          color: green;
-        }
-          /* Add some animation to the delete action */
-        .list-group-item {
-            transition: opacity 0.5s;
-        }
-        
-        .rating {
-            display: inline-block; /* Display radio buttons in one line */
-        }
-        .commentary-section {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            max-width: 500px;
-        }
-
-        .comment-list {
-              max-height: 200px;
-              overflow-y: auto;
-              border: 2px solid white;
-              box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-          }
-
-    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -265,7 +210,6 @@
       </div>
     </section>
 
-
     <section>
         <!--Countdown Timer-->
         <div class="timer">
@@ -276,51 +220,6 @@
           </div>
           <div id="timer" class="timer"></div>
         </div>
-
-        <script src="script.js"></script>
-
-        <script>
-          let intervalId;
-
-          function startTimer() {
-              const inputDateTime = new Date(document.getElementById('dateTime').value).getTime();
-              const now = new Date().getTime();
-
-              if (isNaN(inputDateTime) || inputDateTime <= now) {
-                  alert('Please enter a valid future date and time.');
-                  return;
-              }
-
-              const totalMilliseconds = inputDateTime - now;
-
-              let remainingMilliseconds = totalMilliseconds;
-              const timerElement = document.getElementById('timer');
-              timerElement.classList.add('visible');
-
-              intervalId = setInterval(function() {
-                  remainingMilliseconds -= 1000;
-
-                  if (remainingMilliseconds <= 0) {
-                      clearInterval(intervalId);
-                      timerElement.innerText = 'Timer finished!';
-                  } else {
-                      timerElement.innerText = formatTime(remainingMilliseconds);
-                  }
-              }, 1000);
-          }
-
-          function formatTime(milliseconds) {
-              const days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
-              const hours = Math.floor((milliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              const minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
-              const seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
-
-              return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-          }
-
-        </script>
-
-
     </section>
 
 
@@ -587,29 +486,40 @@
             </div>
         </div>
     </div>
-    <script>
-      // Add an event listener to the "Submit Rating" button
-      document.getElementById("submitRating").addEventListener("click", function () {
-          // Get the selected rating
-          const selectedRating = document.querySelector('input[name="rating"]:checked');
-          
-          if (selectedRating) {
-              const ratingValue = parseInt(selectedRating.value);
-              
-              // Update the average rating
-              const averageRating = parseFloat(document.getElementById("averageRating").textContent);
-              const newAverageRating = (averageRating + ratingValue) / 2;
-              
-              document.getElementById("averageRating").textContent = newAverageRating.toFixed(1);
-              
-              // Reset the rating selection
-              selectedRating.checked = false;
-          } else {
-              alert("Please select a rating before submitting.");
-          }
-      });
-    </script>
     </section>
+    <section>
+      <div class="container mt-4">
+        <ul class="nav nav-tabs" id="commentTabs">
+            <li class="nav-item">
+                <a class="nav-link active" id="leaveCommentTab" data-toggle="tab" href="#leaveComment">Leave a Comment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="commentsTab" data-toggle="tab" href="#comments">Comments</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="leaveComment">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 style="color: goldenrod">Leave a Comment</h3>
+                        <input type="text" id="name" placeholder="Name">
+                        <textarea id="comment" placeholder="Your comment"></textarea>
+                        <button id="submit-comment">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="comments">
+                <div class="col-md-6">
+                    <h3 style="color: goldenrod">Comments</h3>
+                    <div id="comment-list" class="comment-list" style="color: white;">
+                        <!-- Comments will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
     <section>
       <div class="container mt-5">
         <h2 style="color: goldenrod">Anime Characters</h2>
@@ -900,122 +810,9 @@
                 </div>
             </div>
         </div>
-    </div>
-
-      <script>
-          function validateSecondSectionForm() {
-              const nameInput = document.getElementById('fullname');
-              const emailInput = document.getElementById('email');
-              const messageInput = document.getElementById('message');
-
-              if (nameInput.value === '') {
-                  alert('The "Fullname" field must be filled in');
-                  return false;
-              } else {
-                  document.getElementById('name-error').textContent = '';
-              }
-
-              if (emailInput.value === '') {
-                  alert('The "Email" field must be filled in');
-                  return false;
-              } else {
-                  document.getElementById('email-error').textContent = '';
-              }
-
-
-              if (messageInput.value === '') {
-                  alert('The "Message" field must be filled in');
-                  return false;
-              }else {
-                  document.getElementById('message-error').textContent = '';
-              }
-
-
-              return true;
-          }
-
-          const secondSectionForm = document.getElementById('second-section-form');
-          secondSectionForm.addEventListener('submit', function (event) {
-              if (!validateSecondSectionForm()) {
-                  event.preventDefault(); }
-          });
-      </script>
-      <script>
-          document.getElementById("popupButton").addEventListener("click", showPopup);
-  
-          function showPopup() {
-              alert("Your localhost number is 63342.");
-          }
-  
-          document.getElementById("myForm").addEventListener("submit", function(event) {
-              event.preventDefault();
-              if (validateForm()) {
-                  alert("The form was submitted successfully.");
-              }
-          }); 
-  
-          function validateForm() {
-              const emailInput = document.getElementById("emailInput");
-              if (!emailInput.checkValidity()) {
-                  alert("Please enter a valid email address.");
-                  return false;
-              }
-              return true;
-          }
-  
-          tippy("#myElement", {
-              content: "This is the button to submit data",
-              placement: "top",
-          });
-  
-          document.getElementById("notificationButton").addEventListener("click", function() {
-              showNotification("This is an important notice!");
-          });
-  
-          function showNotification(message) {
-              const notification = document.createElement("div");
-              notification.className = "notification";
-              notification.textContent = message;
-              document.body.appendChild(notification);
-  
-              setTimeout(() => {
-                  notification.remove();
-              }, 5000);
-          }
-      </script>
-      <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy.all.min.js"></script>
+      </div>
     </section>
 
-    <script>
-      // Get all "Watch" buttons with the class "btn-watch"
-      var watchButtons = document.querySelectorAll(".btn-watch");
-
-      // Add a click event listener to each "Watch" button
-      watchButtons.forEach(function (button) {
-        button.addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent the default link behavior
-          // Scroll to the video player section smoothly
-          document
-            .getElementById("videoPlayerSection")
-            .scrollIntoView({ behavior: "smooth" });
-        });
-      });
-      function playVideo(videoSource) {
-        var video = document.getElementById("animeVideo");
-        video.src = videoSource;
-        video.load(); // Load the new video source
-        video.play(); // Play the video
-      }
-    </script>
-    
-    <script>
-      function scrollToSection(sectionId) {
-        const section = document.querySelector(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -1033,45 +830,14 @@
       crossorigin="anonymous"
     ></script>
 
-
-    <script>
-      // Get references to the input and list elements
-      const animeInput = document.getElementById("animeInput");
-      const animeList = document.getElementById("animeList");
-  
-      // Add anime to the list
-      document.getElementById("addAnime").addEventListener("click", () => {
-          const animeName = animeInput.value.trim();
-          if (animeName) {
-              const listItem = document.createElement("li");
-              listItem.className = "list-group-item";
-              listItem.innerHTML = `
-                  ${animeName}
-                  <button class="btn btn-danger btn-sm float-right delete">Delete</button>
-                  <button class="btn btn-success btn-sm float-right complete">Mark as Completed</button>
-              `;
-              animeList.appendChild(listItem);
-              animeInput.value = ""; // Clear the input field
-          }
-      });
-  
-      // Handle delete and mark as completed actions
-      animeList.addEventListener("click", (e) => {
-          const target = e.target;
-          if (target.classList.contains("delete")) {
-              // Smoothly fade out the anime name
-              const listItem = target.parentElement;
-              listItem.style.opacity = "0";
-              setTimeout(() => {
-                  listItem.remove();
-              }, 500); // Adjust the delay to match the transition duration
-          } else if (target.classList.contains("complete")) {
-              target.parentElement.classList.toggle("completed");
-          }
-      });
-  </script>
-
-
+    <script src="ScrollSmoothAnimation.js"></script>
+    <script src="Todolist.js"></script>
+    <script src="rating_submit.js"></script>
+    <script src="com_submit.js"></script>
+    <script src="popUp.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy.all.min.js"></script>
+    <script src="formValidation.js"></script>
+    <script src="countdown.js"></script>
 
   </body>
   <footer class="bg-dark text-white py-4" id="contacts_footer">
