@@ -1,0 +1,67 @@
+/* Styles for quiz items */
+
+body {
+    background-image: url('/yeltoresanzharmaga/assets/anime-game-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2{
+    background-color: #fcfc03;
+    color: darkviolet;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ebf604;
+    background-color: #a70eda;
+}
+
+.anime, .character {
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #cc0adc;
+    cursor: move;
+    background-color: #e4ee07;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+.column:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.correct {
+    background-color: #41f141 !important;
+}
+
+.incorrect {
+    background-color: #e34040 !important;
+}
+
+#redirectButton {
+    padding: 10px 20px;
+    background-color: #8A2BE2; /* фиолетовый */
+    color: #FFFF00; /* желтый */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#redirectButton:hover {
+    background-color: #9400D3; /* изменение цвета при наведении */
+}
+
+#redirectButton:active {
+    transform: scale(0.95); /* изменение масштаба при нажатии */
+}
