@@ -393,6 +393,23 @@
         </div>
       </div>
     </section>
+    <section>
+        <div class="gameGoing">
+          <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-8">
+                  <h1 style="color: goldenrod;">Want to try yourself in anime game?</h1>
+                  <button id="animeButton">Play Now</button>
+                  </div>
+                  <div class="col-md-4">
+                    <img src="assets/gojo.jpeg" style="width: 150px;">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <script src="Javascript/GamePageButton.js"></script>
+    </section>
+
     <section id="videoPlayerSection" class="container mt-5">
       <div class="row">
         <div class="col-md-8">
@@ -725,9 +742,6 @@
   </div>
   </section>
 
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <section id="aboutUs" class="bg-gray py-5 text-white" style="margin-top: 50px;"> 
           <div class="container">
             <div class="row">
@@ -746,6 +760,10 @@
                   committed to creating an immersive and enjoyable experience for
                   all anime fans.
                 </p>
+                <p>If you want to know more about rules and also know how to improve our
+                  website then confidently press this button:
+                </p>
+                <button id="myButtonHelp" class="animate-button">PressMe</button>
               </div>
               <div class="col-md-6">
                 <video
@@ -762,58 +780,7 @@
             </div>
           </div>
     </section>
-
-    <!--Form Validation and Feedback-->
-    <section>
-      <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-6">
-                <form id="second-section-form" onsubmit="return validateSecondSectionForm()">
-                    <h2 style="color: rgb(103, 103, 245);">Have any ideas on how to improve the website?</h2>
-                    <div>
-                        <label for="fullname" style="color: goldenrod">Fullname:</label>
-                        <input type="text" id="fullname" name="fullname">
-                    </div>
-                    <div>
-                        <label for="email" style="color: goldenrod">Email:</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    <div>
-                        <label for="message" style="color: goldenrod">Message:</label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
-                    <div>
-                        <input type="submit" value="Submit">
-                    </div>
-                </form>
-            </div>
-    
-            <div class="col-md-6">
-                <div class="feedback">
-                    <h2 style="color: rgb(103, 103, 245);">Feedback and help page with website rules and tips</h2>
-                </br>
-                    <!-- Popup example -->
-                    <button class="feedback-button" id="popupButton">Show a localhost</button>
-                </br>
-                    <!-- Example of a form with validation -->
-                    <form id="myForm" class="feedback-form" style="background-color: black;">
-                        <label for="emailInput" style="color: goldenrod;">Email:</label>
-                        <input type="email" id="emailInput" required>
-                        <button type="submit" class="feedback-button">Send</button>
-                    </form>
-    
-                    <!-- Example of an element with a tooltip -->
-                    <a href="help.html" class="feedback-button">HELP</a>
-    
-                    <!-- Example notification -->
-                    <button class="feedback-button" id="notificationButton">Notifications</button>
-                </div>
-            </div>
-        </div>
-      </div>
-    </section>
-
-
+    <script src="Javascript/RotatingButton.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -829,15 +796,23 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-
-    <script src="ScrollSmoothAnimation.js"></script>
-    <script src="Todolist.js"></script>
-    <script src="rating_submit.js"></script>
-    <script src="com_submit.js"></script>
-    <script src="popUp.js"></script>
+    <script>
+      document.addEventListener("keypress", (event) => {
+            if (event.key === "r") {
+                // Play a sound when the "r" key is pressed (replace 'sound.mp3' with the actual sound file)
+                const audio = new Audio("assets/gojo_ryoiki_tenkai.mp3");
+                audio.play();
+            }
+        });
+    </script>
+    <script src="Javascript/ScrollSmoothAnimation.js"></script>
+    <script src="Javascript/Todolist.js"></script>
+    <script src="Javascript/rating_submit.js"></script>
+    <script src="Javascript/com_submit.js"></script>
+    <script src="Javascript/popUp.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy.all.min.js"></script>
-    <script src="formValidation.js"></script>
-    <script src="countdown.js"></script>
+    <script src="Javascript/formValidation.js"></script>
+    <script src="Javascript/countdown.js"></script>
 
   </body>
   <footer class="bg-dark text-white py-4" id="contacts_footer">
