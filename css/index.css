@@ -50,8 +50,6 @@ background-color: rgb(20, 20, 20);
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
 .gameGoing{
-    margin-left: 250px;
-    margin-right: 250px;
     background-color: rgb(19, 0, 97);
     padding: 10px;
     border-radius: 50px;
