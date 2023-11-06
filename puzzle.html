@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/puzzle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="board"></div>
+<h1>Turns: <span id ="turns">0</span></h1>
+<button onclick="checkWin()">Check Puzzle</button>
+<div class="container" style="display: flex; justify-content: center; align-items: center;">
+    <button id="redirectButton" href="index.html" ><a href="index.html" class="feedback-button">Return back</a></button>
+</div>
+
+<script>
+  function checkWin() {
+    let winOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let currentOrder = Array.from(document.getElementById("board").children).map(tile => tile.src.split("/").pop().split(".")[0]);
+
+    if (currentOrder.join("") === winOrder.join("")) {
+      displayPromotionalCode();
+    }
+  }
+
+  function displayPromotionalCode() {
+    let promoCode = generatePromoCode();
+    alert("Congratulations! You win! Your promotional code is: " + promoCode);
+  }
+
+  function generatePromoCode() {
+    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    let code = "";
+    for (let i = 0; i < 6; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
+  }
+
+  let rows = 3;
+  let columns = 3;
+
+  let currTile;
+  let otherTile;
+
+  let turns = 0;
+  let imgOrder = ["4", "1", "5", "7", "9", "3", "2", "8", "6"];
+
+  window.onload = function () {
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < columns; c++) {
+        let tile = document.createElement("img");
+        tile.id = r.toString() + "-" + c.toString();
+        tile.src = "/yeltoresanzharmaga/assets/" + imgOrder.shift() + ".jpg";
+        //Drag functionality
+
+        tile.addEventListener("dragstart", dragStart);
+        tile.addEventListener("dragover", dragOver);
+        tile.addEventListener("dragenter", dragEnter);
+        tile.addEventListener("dragleave", dragLeave);
+        tile.addEventListener("drop", dragDrop);
+        tile.addEventListener("dragend", dragEnd);
+        document.getElementById("board").append(tile);
+
+      }
+    }
+  };
+  function dragStart() {
+    currTile = this; //this refers to the img tile being dragged
+  }
+
+  function dragOver(e) {
+    e.preventDefault();
+  }
+
+  function dragEnter(e) {
+    e.preventDefault();
+  }
+
+  function dragLeave() {
+
+  }
+
+  function dragDrop() {
+    otherTile = this; //this refers to the img tile being dropped on
+  }
+
+  function dragEnd() {
+      if (!otherTile.src.includes("9.jpg")) {
+          return;
+      }
+
+      let currCoords = currTile.id.split("-");
+      let r = parseInt(currCoords[0]);
+      let c = parseInt(currCoords[1]);
+
+      let otherCoords = otherTile.id.split("-");
+      let r2 = parseInt(otherCoords[0]);
+      let c2 = parseInt(otherCoords[1]);
+
+      if ((r === r2 && (c2 === c - 1 || c2 === c + 1)) || (c === c2 && (r2 === r - 1 || r2 === r + 1))) {
+          let currImg = currTile.src;
+          let otherImg = otherTile.src;
+
+          currTile.src = otherImg;
+          otherTile.src = currImg;
+
+          turns += 1;
+          document.getElementById("turns").innerText = turns;
+
+          checkWin();
+      }
+  }
+</script>
+</body>
+</html>
