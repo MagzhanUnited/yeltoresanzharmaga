@@ -263,6 +263,7 @@ button.animate-button:hover {
     border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
+    z-index: 9999;
   }
 
   #search-bar {
