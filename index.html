@@ -212,21 +212,21 @@
     <section>
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Search for name of any anime</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Search for the name of any anime</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-4" id="search-bar">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input id="searcherinput" type="text" class="form-control" placeholder="Anime Name" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div id="suggestions"></div>
+                </div>
             </div>
-            <div class="modal-body">
-              <div class="input-group mb-3" id="search-bar">
-                <span class="input-group-text" id="basic-addon1">@</span>
-                <input id="searcherinput" type="text" class="form-control" placeholder="AnimeName" aria-label="Username" aria-describedby="basic-addon1">
-              </div>              
-              <div id="suggestions"></div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
       <div style="text-align: center;">
         <button id="searchbtn" class="btn btn-primary" type="button" style="width: 500px;">
           <i class="fa fa-search" style="float: left; margin-top: 3px;"></i> Search
