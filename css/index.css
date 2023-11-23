@@ -265,13 +265,13 @@ button.animate-button:hover {
     cursor: pointer;
   }
 
-#search-bar {
-position: relative;
-overflow: hidden;
+  #search-bar {
+  position: relative;
+  overflow: hidden;
 }
 
 #searcherinput {
-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #searcherinput:hover {
