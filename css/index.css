@@ -265,20 +265,19 @@ button.animate-button:hover {
     cursor: pointer;
   }
 
-  .input-group {
-    transition: width 0.3s; /* Add a transition for the width property */
-    overflow: hidden;
-    width: 200px; /* Initial width */
-  }
+  #search-bar {
+  position: relative;
+  overflow: hidden;
+}
 
-  .input-group:hover {
-    width: 300px; /* Expanded width on hover */
-  }
+#searcherinput {
+  transition: all 0.3s ease;
+}
 
-  .input-group-text {
-    transition: transform 0.3s; /* Add a transition for the transform property */
-  }
-
-  .input-group:hover .input-group-text {
-    transform: translateX(-500%); /* Adjust position on hover */
-  }
+#searcherinput:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #004b96; /* Change to the color you prefer */
+  color: #000000; /* Change to the text color you prefer */
+  border-color: #ced4da; /* Change to the border color you prefer */
+}
