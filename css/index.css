@@ -264,3 +264,21 @@ button.animate-button:hover {
     padding: 10px 15px;
     cursor: pointer;
   }
+
+  .input-group {
+    transition: width 0.3s; /* Add a transition for the width property */
+    overflow: hidden;
+    width: 150px; /* Initial width */
+  }
+
+  .input-group:hover {
+    width: 250px; /* Expanded width on hover */
+  }
+
+  .input-group-text {
+    transition: transform 0.3s; /* Add a transition for the transform property */
+  }
+
+  .input-group:hover .input-group-text {
+    transform: translateX(-50%); /* Adjust position on hover */
+  }
