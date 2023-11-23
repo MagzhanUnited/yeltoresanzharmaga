@@ -272,7 +272,7 @@ button.animate-button:hover {
   }
 
   .input-group:hover {
-    width: 400px; /* Expanded width on hover */
+    width: 300px; /* Expanded width on hover */
   }
 
   .input-group-text {
