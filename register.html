@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/register.css">
   <title>Registration</title>
   <link rel="icon" type="image/x-icon" href="assets/akatsuki.png">
-
+  <link rel="stylesheet" href="css/modalStuff.css">
 </head>
 <body>
 <div class="container">
@@ -43,7 +43,14 @@
       I agree to the terms and conditions
     </label>
 
-    <button type="submit">Register</button>
+    <button
+        type="submit"
+        class="btn btn-primary btn-lg"
+        style="padding-left: 2.5rem; padding-right: 2.5rem; margin-top: 10px;"
+        onclick="openVerificationModal()"
+>
+    Register
+</button>
   </form>
   <div class="social-buttons">
     <button class="google-button">
@@ -62,6 +69,17 @@
   </div>
 
 </div>
+
+<div id="myModal">
+  <div class="modal-content" id="verificationModalContent">
+      <img src="assets/raiden.png" alt="Login Image">
+      <p style="color:red;">Something went wrong, Please check every part to be correctly written!</p>
+      <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="Javascript/ModalsOfLogVer.js">
+</script>
 
 </body>
 </html>
