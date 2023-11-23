@@ -280,5 +280,5 @@ button.animate-button:hover {
   }
 
   .input-group:hover .input-group-text {
-    transform: translateX(-100%); /* Adjust position on hover */
+    transform: translateX(-500%); /* Adjust position on hover */
   }
