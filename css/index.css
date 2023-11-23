@@ -277,7 +277,7 @@ transition: all 0.3s ease;
 #searcherinput:hover {
 transform: scale(1.1);
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-background-color: #004b96; /* Change to the color you prefer */
-color: #000000; /* Change to the text color you prefer */
+background-color: #96c5f4; /* Change to the color you prefer */
+color: goldenrod; /* Change to the text color you prefer */
 border-color: #ced4da; /* Change to the border color you prefer */
 }
