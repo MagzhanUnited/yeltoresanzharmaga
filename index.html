@@ -236,7 +236,11 @@
     <script type="module" src="services/listener_service/searcher.js"></script>
     <script type="module" src="services/remote_service/atameken_service.js"></script>
 
-    
+    <section>
+      <button id="scrollBtn" onclick="scrollToTop()">Scroll to Top🚀</button>
+      <script src="Javascript/ScrollTopEach.js"></script>
+    </section>
+
     <section id="mainPart" class="container mt-5">
       <div class="row">
         <div class="col-md-4" style="margin-top: auto; margin-bottom: auto">
@@ -448,28 +452,28 @@
             <li class="list-group-item">
               <a
                 href="#"
-                onclick="playVideo('assets/Bleach.mp4')"
+                onclick="playVideo('assets/backgroundd.webm')"
                 >Bleach</a
               >
             </li>
             <li class="list-group-item">
               <a
                 href="#"
-                onclick="playVideo('assets/Bluelock.mp4')"
+                onclick="playVideo('assets/backgroundd.webm')"
                 >Bluelock</a
               >
             </li>
             <li class="list-group-item">
               <a
                 href="#"
-                onclick="playVideo('assets/Blackc.mp4')"
+                onclick="playVideo('assets/backgroundd.webm')"
                 >Black Clover</a
               >
             </li>
             <li class="list-group-item">
               <a
                 href="#"
-                onclick="playVideo('assets/Jjk.mp4')"
+                onclick="playVideo('assets/backgroundd.webm')"
                 >Jujustsu Kaisen</a
               >
             </li>
@@ -650,7 +654,7 @@
         </div>
     </div>
 
-        <!-- Asta Modal -->
+    <!-- Asta Modal -->
     <div class="modal fade" id="astaModal" tabindex="-1" role="dialog" aria-labelledby="astaModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -796,7 +800,21 @@
             </div>
           </div>
     </section>
+    <section>
+        <div class="chat-popup" id="myChat">
+          <div class="chat-popup-header" onclick="toggleChat()">Admin :D</div>
+          <div class="chat-popup-content">
+            <p>Need any help? Write to our admin, he will help you!</p>
+            <textarea placeholder="Type your message here..."></textarea>
+            <button onclick="sendMessage()">Submit</button>
+            <span class="close-button" onclick="toggleChat()">&times;</span>
+          </div>
+        </div>
 
+        <button onclick="toggleChat()">Help🌟</button>
+
+        <script src="Javascript/helpChat.js"></script>
+    </section>
 
     <script src="Javascript/RotatingButton.js"></script>
     <script
