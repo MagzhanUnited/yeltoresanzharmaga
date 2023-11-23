@@ -268,11 +268,11 @@ button.animate-button:hover {
   .input-group {
     transition: width 0.3s; /* Add a transition for the width property */
     overflow: hidden;
-    width: 150px; /* Initial width */
+    width: 200px; /* Initial width */
   }
 
   .input-group:hover {
-    width: 250px; /* Expanded width on hover */
+    width: 500px; /* Expanded width on hover */
   }
 
   .input-group-text {
