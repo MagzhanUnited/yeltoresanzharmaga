@@ -206,7 +206,7 @@ button.animate-button:hover {
     border-radius: 10px 10px 0 0;
     background-color: #f1f1f1;
     max-width: 300px;
-    z-index: 10000;
+    z-index: 100000;
   }
 
   .chat-popup-header {

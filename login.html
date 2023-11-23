@@ -7,6 +7,7 @@
 
 />
 <link rel="icon" type="image/png" href="assets/akatsuki.png">
+<link rel="stylesheet" href="css/modalStuff.css">
 <section class="vh-100" style="background-color: rgb(45, 45, 45)">
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -108,6 +109,7 @@
                     type="button"
                     class="btn btn-primary btn-lg"
                     style="padding-left: 2.5rem; padding-right: 2.5rem; color: white"
+                    onclick="openLoginModal()"
 
             >
               Login
@@ -117,7 +119,14 @@
               <a href="register.html" class="link-danger">Register</a>
             </p>
           </div>
+          <div id="myModal">
+            <div class="modal-content" id="loginModalContent">
+                <img src="assets/chichi.png" alt="Login Image">
+                <p>Oops, we apologize but due to high online rate, login function is currently unavailable, we will repair it soon!</p>
+                <button onclick="closeModal()">Close</button>
+            </div>
         </form>
+        <script src="Javascript/ModalsOfLogVer.js"></script>
       </div>
     </div>
   </div>
