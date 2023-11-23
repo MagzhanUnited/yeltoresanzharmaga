@@ -265,19 +265,19 @@ button.animate-button:hover {
     cursor: pointer;
   }
 
-#search-bar {
-position: relative;
-overflow: hidden;
+  #search-bar {
+  position: relative;
+  overflow: hidden;
 }
 
 #searcherinput {
-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #searcherinput:hover {
-transform: scale(1.1);
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-background-color: #004b96; /* Change to the color you prefer */
-color: #000000; /* Change to the text color you prefer */
-border-color: #ced4da; /* Change to the border color you prefer */
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #004b96; /* Change to the color you prefer */
+  color: #000000; /* Change to the text color you prefer */
+  border-color: #ced4da; /* Change to the border color you prefer */
 }
